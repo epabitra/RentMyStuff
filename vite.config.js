@@ -3,11 +3,9 @@ import react from '@vitejs/plugin-react'
 import { copyFileSync, existsSync } from 'fs'
 import { resolve } from 'path'
 
-// For GitHub Pages: site is at https://<user>.github.io/<repo>/
-// Production build uses subpath; local dev uses root.
-const base = process.env.NODE_ENV === 'production'
-  ? (process.env.VITE_BASE_PATH || '/rentmystuff/')
-  : '/'
+// Use relative base so assets load correctly on GitHub Pages (any repo name/path).
+// React Router basename is derived from window.location in main.jsx.
+const base = './'
 
 /** Copy index.html to 404.html so GitHub Pages serves the SPA for all routes */
 function copy404Plugin() {
