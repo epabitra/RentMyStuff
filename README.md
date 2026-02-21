@@ -52,7 +52,7 @@ Use the **exact repo name** you want in the URL (e.g. `rentmystuff` or `RentMySt
 ### 2. Enable GitHub Pages
 
 1. In your repo go to **Settings** → **Pages**.
-2. Under **Source**, choose **GitHub Actions** (not “Deploy from a branch”).
+2. Under **Build and deployment** → **Source**, choose **GitHub Actions** (not “Deploy from a branch”).
 3. Save.
 
 ### 3. Deploy
