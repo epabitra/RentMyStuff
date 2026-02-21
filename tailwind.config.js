@@ -1,0 +1,110 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
+      },
+      colors: {
+        primary: {
+          50: '#f0fdfa',
+          100: '#ccfbf1',
+          200: '#99f6e4',
+          300: '#5eead4',
+          400: '#2dd4bf',
+          500: '#14b8a6',
+          600: '#0d9488',
+          700: '#0f766e',
+          800: '#115e59',
+          900: '#134e4a',
+          950: '#042f2e',
+        },
+        accent: {
+          50: '#fffbeb',
+          100: '#fef3c7',
+          200: '#fde68a',
+          300: '#fcd34d',
+          400: '#fbbf24',
+          500: '#f59e0b',
+          600: '#d97706',
+          700: '#b45309',
+          800: '#92400e',
+          900: '#78350f',
+        },
+        surface: { DEFAULT: '#ffffff', muted: '#fafaf9', elevated: '#ffffff' },
+        ink: { primary: '#1c1917', secondary: '#57534e', tertiary: '#a8a29e' },
+      },
+      backgroundImage: {
+        'gradient-primary': 'linear-gradient(135deg, #0d9488 0%, #14b8a6 50%, #2dd4bf 100%)',
+        'gradient-primary-soft': 'linear-gradient(135deg, #ccfbf1 0%, #f0fdfa 50%, #ecfdf5 100%)',
+        'gradient-hero': 'linear-gradient(135deg, #0f766e 0%, #0d9488 35%, #14b8a6 70%, #0f766e 100%)',
+        'gradient-mesh': 'radial-gradient(ellipse 80% 50% at 50% -20%, rgba(13, 148, 136, 0.25), transparent), radial-gradient(ellipse 60% 40% at 100% 50%, rgba(45, 212, 191, 0.15), transparent)',
+        'gradient-card': 'linear-gradient(145deg, #ffffff 0%, #f0fdfa 100%)',
+        'gradient-card-hover': 'linear-gradient(145deg, #f0fdfa 0%, #ccfbf1 100%)',
+        'gradient-nav': 'linear-gradient(180deg, #ffffff 0%, #fafafa 100%)',
+        'gradient-section-alt': 'linear-gradient(180deg, #f0fdfa 0%, #ffffff 100%)',
+        'gradient-footer': 'linear-gradient(180deg, #134e4a 0%, #042f2e 100%)',
+        'gradient-cta': 'linear-gradient(135deg, #0f766e 0%, #0d9488 100%)',
+        'gradient-accent': 'linear-gradient(135deg, #d97706 0%, #f59e0b 100%)',
+      },
+      maxWidth: {
+        '8xl': '90rem',
+        '9xl': '96rem',
+        '10xl': '100rem',
+      },
+      borderRadius: { '2xl': '1rem', '3xl': '1.25rem' },
+      screens: { xs: '475px' },
+      boxShadow: {
+        xs: '0 1px 2px rgba(0, 0, 0, 0.04)',
+        sm: '0 2px 8px rgba(0, 0, 0, 0.06)',
+        DEFAULT: '0 4px 16px rgba(0, 0, 0, 0.08)',
+        md: '0 8px 24px rgba(0, 0, 0, 0.08)',
+        lg: '0 16px 48px rgba(0, 0, 0, 0.1)',
+        card: '0 4px 20px rgba(15, 118, 110, 0.08)',
+        'card-hover': '0 16px 40px rgba(15, 118, 110, 0.18)',
+        'card-glow': '0 0 0 1px rgba(13, 148, 136, 0.1), 0 8px 24px rgba(15, 118, 110, 0.12)',
+        button: '0 2px 8px rgba(13, 148, 136, 0.3)',
+        'button-hover': '0 4px 16px rgba(13, 148, 136, 0.4)',
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.5s ease-out forwards',
+        'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
+        'slide-up': 'slideUp 0.5s ease-out forwards',
+        'scale-in': 'scaleIn 0.4s ease-out forwards',
+        float: 'float 6s ease-in-out infinite',
+        shimmer: 'shimmer 2s ease-in-out infinite',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0', transform: 'translateY(12px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        fadeInUp: {
+          '0%': { opacity: '0', transform: 'translateY(24px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        slideUp: {
+          '0%': { opacity: '0', transform: 'translateY(16px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        scaleIn: {
+          '0%': { opacity: '0', transform: 'scale(0.96)' },
+          '100%': { opacity: '1', transform: 'scale(1)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-6px)' },
+        },
+        shimmer: {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0.85' },
+        },
+      },
+    },
+  },
+  plugins: [],
+}

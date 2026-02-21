@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --gradient-primary: linear-gradient(135deg, #0d9488 0%, #14b8a6 50%, #2dd4bf 100%);
+    --gradient-hero: linear-gradient(135deg, #0f766e 0%, #0d9488 35%, #14b8a6 70%, #0f766e 100%);
+  }
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply text-ink-primary antialiased;
+    font-family: var(--font-sans), system-ui, sans-serif;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    background: linear-gradient(180deg, #f8fffe 0%, #f0fdfa 30%, #fafaf9 100%);
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-primary-600 to-primary-500 px-6 py-3.5 text-sm font-semibold text-white shadow-button transition-all duration-300 hover:from-primary-700 hover:to-primary-600 hover:shadow-button-hover focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 active:scale-[0.98];
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border-2 border-primary-500 bg-white bg-gradient-to-b from-white to-primary-50/30 px-6 py-3.5 text-sm font-semibold text-primary-700 transition-all duration-300 hover:border-primary-600 hover:from-primary-50 hover:to-primary-100/50 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 active:scale-[0.98];
+  }
+  .btn-accent {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-accent-500 to-accent-400 px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:from-accent-600 hover:to-accent-500 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2 active:scale-[0.98];
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-medium text-ink-secondary transition-colors hover:bg-stone-100 hover:text-ink-primary;
+  }
+  .input-field {
+    @apply w-full rounded-xl border border-stone-300 bg-white px-4 py-3 text-ink-primary placeholder-stone-400 transition-all duration-200 focus:border-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500/20;
+  }
+  .card {
+    @apply rounded-2xl bg-gradient-to-br from-white to-primary-50/40 shadow-card transition-all duration-300 hover:shadow-card-hover hover:to-primary-100/50 border border-primary-100/50;
+  }
+  .card-flat {
+    @apply rounded-2xl bg-white border border-stone-200/80;
+  }
+  .section-padding {
+    @apply py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28 px-4 xs:px-5 sm:px-6 lg:px-8;
+  }
+  .container-narrow {
+    @apply max-w-3xl mx-auto px-4 xs:px-5 sm:px-6 lg:px-8;
+  }
+  .container-wide {
+    @apply max-w-8xl mx-auto px-4 xs:px-5 sm:px-6 lg:px-8;
+  }
+  .container-ultra {
+    @apply max-w-9xl mx-auto px-4 xs:px-5 sm:px-6 lg:px-8;
+  }
+  .heading-1 {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-ink-primary;
+  }
+  .heading-2 {
+    @apply text-2xl md:text-3xl font-bold tracking-tight text-ink-primary;
+  }
+  .heading-3 {
+    @apply text-xl font-semibold text-ink-primary;
+  }
+  .body-lg {
+    @apply text-stone-600 leading-relaxed;
+  }
+  .nav-link { @apply text-sm font-medium text-ink-secondary transition-colors hover:text-primary-600; }
+  .nav-link-active { @apply text-primary-600; }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .animate-delay-100 { animation-delay: 100ms; }
+  .animate-delay-200 { animation-delay: 200ms; }
+  .animate-delay-300 { animation-delay: 300ms; }
+  .animate-delay-400 { animation-delay: 400ms; }
+  .animate-delay-500 { animation-delay: 500ms; }
+}
